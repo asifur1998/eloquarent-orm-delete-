@@ -1,0 +1,16 @@
+
+
+
+
+
+delete
+ public function delete_area($id)
+    {
+        $area = Area::find($id);
+        $area->delete();
+
+        return redirect()->back()->with('message','Area has been Deleted!');
+    }
+
+ancore url : {{url('delete_area',$area->id)}}    <a href=""> Delete </a>
+route : /delete_area/{id}'   web.php 
